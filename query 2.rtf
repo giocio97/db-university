@@ -1,0 +1,126 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2638
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\fswiss\fcharset0 Arial-BoldMT;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red98\green0\blue117;
+\red223\green223\blue223;\red52\green52\blue52;\red135\green136\blue100;\red7\green64\blue153;\red251\green0\blue255;
+\red152\green0\blue15;\red19\green85\blue52;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c46667\c0\c53333;
+\cssrgb\c89804\c89804\c89804;\cssrgb\c26667\c26667\c26667;\cssrgb\c60000\c60000\c46667;\cssrgb\c0\c33333\c66667;\cssrgb\c100000\c0\c100000;
+\cssrgb\c66667\c6667\c6667;\cssrgb\c6667\c40000\c26667;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid302\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13960\viewh8400\viewkind0
+\deftab720
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293\partightenfactor0
+\ls1\ilvl0
+\f0\fs29\fsmilli14667 \cf2 \cb3 {\listtext	\uc0\u8226 	}
+\f1\b \expnd0\expndtw0\kerning0
+Contare quanti iscritti ci sono stati ogni anno 
+\f0\b0 \
+\pard\tx566\pardeftab720\sa293\partightenfactor0
+\cf2 SELECT year (`enrolment_date`) as year, COUNT (id) as number \
+FROM `students`\
+GROUP BY YEAR (`enrolment_date`)\
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293\partightenfactor0
+\ls2\ilvl0\cf2 \cb1 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}
+\f1\b \cb3 \expnd0\expndtw0\kerning0
+Contare gli insegnanti che hanno l'ufficio nello stesso edificio \
+\pard\tx566\pardeftab720\sa293\partightenfactor0
+
+\f0\b0 \cf2 SELECT COUNT (`id`), `office_address` \
+FROM `teachers`\
+GROUP BY `office_address`\cb1 \uc0\u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293\partightenfactor0
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}
+\f1\b \expnd0\expndtw0\kerning0
+Calcolare la media dei voti di ogni appello d'esame\
+\pard\pardeftab720\partightenfactor0
+\ls3\ilvl0
+\f2\b0\fs21\fsmilli10660 \cf4 \cb5 \kerning1\expnd0\expndtw0 	{\field{\*\fldinst{HYPERLINK "http://localhost:8888/phpMyAdmin5/url.php?url=https://dev.mysql.com/doc/refman/5.7/en/select.html"}}{\fldrslt \expnd0\expndtw0\kerning0
+SELECT}}\cf6 \expnd0\expndtw0\kerning0
+ exam_id, {\field{\*\fldinst{HYPERLINK "http://localhost:8888/phpMyAdmin5/url.php?url=https://dev.mysql.com/doc/refman/5.7/en/group-by-functions.html#function_avg"}}{\fldrslt \cf4 AVG}}\cf7 (\cf6 vote\cf7 )\cf6  \cf4 FROM\cf6  exam_student \cf4 GROUP\cf6  \cf4 BY\cf6  exam_id;
+\f0\fs29\fsmilli14667 \cf2 \cb3  \cb1 \uc0\u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293\partightenfactor0
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}  
+\f1\b \expnd0\expndtw0\kerning0
+Contare quanti corsi di laurea ci sono per ogni dipartimento
+\f0\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs21\fsmilli10660 \cf4 \cb5 	{\field{\*\fldinst{HYPERLINK "http://localhost:8888/phpMyAdmin5/url.php?url=https://dev.mysql.com/doc/refman/5.7/en/select.html"}}{\fldrslt SELECT}}\cf6  {\field{\*\fldinst{HYPERLINK "http://localhost:8888/phpMyAdmin5/url.php?url=https://dev.mysql.com/doc/refman/5.7/en/group-by-functions.html#function_count"}}{\fldrslt \cf4 COUNT}}\cf7 (\cf8 `id`\cf7 )\cf6 , \cf8 `department_id`\cf6  \cf4 FROM\cf6  \cf8 `degrees`\cf6  \cf4 GROUP\cf6  \cf4 BY\cf6  \cf7 (\cf8 `department_id`\cf7 )\cf6 ;
+\f0\fs29\fsmilli14667 \cf2 \cb3 \
+\pard\tx566\pardeftab720\sa293\partightenfactor0
+\cf2 \kerning1\expnd0\expndtw0 \
+FINE GROUP BY\
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293\partightenfactor0
+\ls4\ilvl0\cf2 {\listtext	\uc0\u8226 	}\'95	
+\f1\b \expnd0\expndtw0\kerning0
+Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia 
+\f0\b0 \cb1 \uc0\u8232 \cb3  \cb1 \uc0\u8232 {\field{\*\fldinst{HYPERLINK "http://localhost:8888/phpMyAdmin5/url.php?url=https://dev.mysql.com/doc/refman/5.7/en/select.html"}}{\fldrslt 
+\f2\fs21\fsmilli10660 \cf4 \cb5 SELECT}}
+\f2\fs21\fsmilli10660 \cf6 \cb5  \cf9 *\cf6  \cf4 FROM\cf6  students \cf4 JOIN\cf6  degrees \cf4 ON\cf6  courses\cf8 .degree_id\cf6  \cf9 =\cf6  degrees\cf8 .id\cf6  \cf4 WHERE\cf6  degrees\cf8 .name\cf6  \cf9 =\cf6  \cf10 'Corso di Laurea in Economia'\cf6 ;
+\f0\fs29\fsmilli14667 \cf2 \cb1 \uc0\u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293\partightenfactor0
+\ls4\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}
+\f1\b \cb3 \expnd0\expndtw0\kerning0
+Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls4\ilvl1
+\f2\b0\fs21\fsmilli10660 \cf4 \cb5 {\listtext	
+\f3 \uc0\u8259 
+\f2 	}\cf6 degrees\cf8 .department_id\cf6  \cf4 WHERE\cf6  degrees\cf8 .level\cf6  {\field{\*\fldinst{HYPERLINK "http://localhost:8888/phpMyAdmin5/url.php?url=https://dev.mysql.com/doc/refman/5.7/en/string-comparison-functions.html#operator_like"}}{\fldrslt \cf4 LIKE}} \cf10 'magistrale'\cf6  {\field{\*\fldinst{HYPERLINK "http://localhost:8888/phpMyAdmin5/url.php?url=https://dev.mysql.com/doc/refman/5.7/en/logical-operators.html#operator_and"}}{\fldrslt \cf4 AND}} departments\cf8 .name\cf6  {\field{\*\fldinst{HYPERLINK "http://localhost:8888/phpMyAdmin5/url.php?url=https://dev.mysql.com/doc/refman/5.7/en/string-comparison-functions.html#operator_like"}}{\fldrslt \cf4 LIKE}} \cf10 'Dipartimento di Neuroscienze'\cf6 ;
+\f0\fs29\fsmilli14667 \cf2 \cb1 \uc0\u8232 
+\f1\b \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293\partightenfactor0
+\ls4\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44) \
+\pard\pardeftab720\partightenfactor0
+\ls4\ilvl0
+\f2\b0\fs21\fsmilli10660 \cf4 \cb5 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}{\field{\*\fldinst{HYPERLINK "http://localhost:8888/phpMyAdmin5/url.php?url=https://dev.mysql.com/doc/refman/5.7/en/select.html"}}{\fldrslt \expnd0\expndtw0\kerning0
+SELECT}}\cf6 \expnd0\expndtw0\kerning0
+ course_teacher.\cf9 *\cf6 , teachers\cf8 .name\cf6 , teachers\cf8 .surname\cf6 , teachers\cf8 .id\cf6 , courses\cf8 .name\cf6 , courses\cf8 .id\cf6  \cf4 FROM\cf6  \cf8 `course_teacher`\cf6  \cf4 JOIN\cf6  \cf8 `courses`\cf6  \cf4 ON\cf6  courses\cf8 .id\cf6  \cf9 =\cf6  course_teacher\cf8 .course_id\cf6  \cf4 JOIN\cf6  \cf8 `teachers`\cf6  \cf4 ON\cf6  teachers\cf8 .id\cf6  \cf9 =\cf6  course_teacher\cf8 .teacher_id\cf6  \cf4 WHERE\cf6  teachers\cf8 .id\cf6  \cf9 =\cf6  \cf11 44\cf6 ;
+\f0\fs29\fsmilli14667 \cf2 \cb1 \uc0\u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293\partightenfactor0
+\ls4\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}
+\f1\b \expnd0\expndtw0\kerning0
+Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome:\
+\pard\pardeftab720\partightenfactor0
+\ls4\ilvl0
+\f2\b0\fs21\fsmilli10660 \cf4 \cb5 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}{\field{\*\fldinst{HYPERLINK "http://localhost:8888/phpMyAdmin5/url.php?url=https://dev.mysql.com/doc/refman/5.7/en/select.html"}}{\fldrslt \expnd0\expndtw0\kerning0
+SELECT}}\cf6 \expnd0\expndtw0\kerning0
+ \cf9 *\cf6  \cf4 FROM\cf6  \cf8 `students`\cf6  \cf4 JOIN\cf6  \cf8 `degrees`\cf6  \cf4 JOIN\cf6  departments \cf4 ON\cf6  students\cf8 .degree_id\cf6  \cf9 =\cf6  degrees\cf8 .id\cf6  {\field{\*\fldinst{HYPERLINK "http://localhost:8888/phpMyAdmin5/url.php?url=https://dev.mysql.com/doc/refman/5.7/en/logical-operators.html#operator_and"}}{\fldrslt \cf4 AND}} degrees\cf8 .department_id\cf6  \cf9 =\cf6  departments\cf8 .id\cf6  \cf4 ORDER\cf6  \cf4 by\cf6  students\cf8 .name\cf6  \cf4 ASC\cf6 , students\cf8 .surname\cf6  \cf4 ASC\cf6 ;
+\f0\fs29\fsmilli14667 \cf2 \cb1 \uc0\u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293\partightenfactor0
+\ls4\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}
+\f1\b \expnd0\expndtw0\kerning0
+Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti 
+\f0\b0 \
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+SELECT degrees.name AS `corso_di_laurea`, courses.name AS `corso`, CONCAT (teachers.surname, '', teachers.name AS `docente`\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+FROM `degrees`\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+JOIN courses ON degrees.id = courses.degree_id\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+JOIN course_teacher ON courses.id = course_teacher.course_id\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+JOIN teachers ON course_teacher.teacher_id = teachers.id\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+ ORDER BY `corso_di_laurea`\cb1 \uc0\u8232 \
+\ls4\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}
+\f1\b \expnd0\expndtw0\kerning0
+Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54) \
+\pard\pardeftab720\partightenfactor0
+\ls4\ilvl0
+\f2\b0\fs21\fsmilli10660 \cf4 \cb5 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}{\field{\*\fldinst{HYPERLINK "http://localhost:8888/phpMyAdmin5/url.php?url=https://dev.mysql.com/doc/refman/5.7/en/select.html"}}{\fldrslt \expnd0\expndtw0\kerning0
+SELECT}}\cf6 \expnd0\expndtw0\kerning0
+ \cf4 DISTINCT\cf6  teachers.\cf9 *\cf6 ,departments\cf8 .name\cf6  \cf4 FROM\cf6  \cf8 `teachers`\cf6  \cf4 JOIN\cf6  course_teacher \cf4 ON\cf6  teachers\cf8 .id\cf6  \cf9 =\cf6  course_teacher\cf8 .teacher_id\cf6  \cf4 JOIN\cf6  courses \cf4 ON\cf6  course_teacher\cf8 .course_id\cf6  \cf9 =\cf6  courses\cf8 .id\cf6  \cf4 JOIN\cf6  degrees \cf4 ON\cf6  courses\cf8 .degree_id\cf6  \cf9 =\cf6  degrees\cf8 .id\cf6  \cf4 JOIN\cf6  departments \cf4 on\cf6  degrees\cf8 .department_id\cf6  \cf9 =\cf6  departments\cf8 .id\cf6  \cf4 WHERE\cf6  departments\cf8 .name\cf6  \cf9 =\cf6  \cf10 'Dipartimento di Matematica'\cf6  \cf4 ORDER\cf6  \cf4 BY\cf6  teachers\cf8 .surname\cf6 , teachers\cf8 .name\cf6  \cf4 ASC\cf6 ;
+\f0\fs29\fsmilli14667 \cf2 \cb1 \uc0\u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293\partightenfactor0
+\ls4\ilvl0\cf2 \uc0\u8232 \
+}
